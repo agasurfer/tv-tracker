@@ -1,0 +1,45 @@
+.container .footer {
+    background-color: #fbb034;
+    background-image: linear-gradient(135deg, #fbb034 0%, #ffdd00 74%);
+    border-radius: 8px;
+    margin-bottom: 50px;
+    box-shadow: rgba(238, 201, 39, 0.979) 0px 3px 8px;
+}
+
+.footer .logo h1 {
+    font-size: 1.2rem;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footlink {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    transition: 0.3s ease-in-out;
+}
+
+.footlink:hover {
+    color: #fa1c0c;
+    transform: scale(1.1);
+}
+
+.footer li {
+    list-style: none;
+}
+
+.legal {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer ul {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
