@@ -15,7 +15,10 @@
         box-shadow: rgba(29, 24, 2, 0.349) 0px 3px 8px;
         cursor: pointer;
         position: relative;
+        
 }
+
+
 
 
 
@@ -31,16 +34,16 @@
     top: 10px;
     right: 10px;
     font-size: 30px;
-    /* Ajustez la taille de l'icône selon vos préférences */
+    
     cursor: pointer;
     transition: color 0.3s ease;
-    /* Animation pour la transition de couleur */
+   
     color: grey;
 }
 
 .heart-icon.liked {
     color: red;
-    /* Le cœur devient rouge quand "liké" */
+  
 }
 
 
@@ -53,4 +56,16 @@
 .genres  {
     font-size: 0.9rem;
     
+}
+
+.infos-btn button {
+    background-color: black;
+    border-radius: 12px;
+    color: white;
+    border: none;
+    padding: 5px;
+    width: 60px;
+    cursor: pointer;
+    box-shadow: rgba(29, 24, 2, 0.349) 0px 3px 8px;
+    margin-top: 5px;
 }

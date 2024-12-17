@@ -5,6 +5,7 @@
     margin-bottom: 50px;
     box-shadow: rgba(238, 201, 39, 0.979) 0px 3px 8px;
     min-height: 60vh;
+    border: 2px #ffdd00 solid;
 }
 
 .search {
@@ -30,6 +31,7 @@
     border: none;
     padding: 5px;
     cursor: pointer;
+    box-shadow: rgba(29, 24, 2, 0.349) 0px 3px 8px;
 }
 
 .searchbar {

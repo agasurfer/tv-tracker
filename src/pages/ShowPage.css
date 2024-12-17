@@ -1,0 +1,68 @@
+.container .show {
+    background-color: #fbb034;
+    background-image: linear-gradient(135deg, #fbb034 0%, #ffdd00 74%);
+    border-radius: 8px;
+    margin-bottom: 50px;
+    box-shadow: rgba(238, 201, 39, 0.979) 0px 3px 8px;
+    min-height: 60vh;
+    border: 2px #ffdd00 solid;
+}
+
+.show-img img {
+    max-height: 400px;
+    max-width: 270px;
+    border-radius: 8px;
+    border: 2px solid black;
+    box-shadow: rgba(0, 0, 0, 0.979) 0px 3px 8px;
+    
+}
+
+.show-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 35px;
+    margin-bottom: 20px;
+
+color: rgba(0, 0, 0, 0.6);
+    text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2),
+        0px -5px 10px rgba(255, 255, 255, 0.15);
+
+   
+    
+}
+
+.show-genres {
+    padding: 10px;
+}
+
+.show-seasons {
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.show-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 5fr 0.5fr 0.5fr 0.5fr;
+    gap: 10px;
+}
+
+
+
+.show-img {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+}
+
+.show-summary {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    font-size: 1.5rem;
+}
+
+.show-cast { 
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
