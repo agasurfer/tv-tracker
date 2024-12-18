@@ -1,0 +1,58 @@
+.container .episodes-list {
+    background-color: #fbb034;
+    background-image: linear-gradient(135deg, #fbb034 0%, #ffdd00 74%);
+    border-radius: 8px;
+    margin-bottom: 50px;
+    box-shadow: rgba(238, 201, 39, 0.979) 0px 3px 8px;
+    min-height: 60vh;
+    border: 2px #ffdd00 solid;
+}
+
+.section-header {
+    display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 35px;
+        margin-bottom: 20px;
+    
+        color: rgba(0, 0, 0, 0.836);
+        text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2),
+            0px -5px 10px rgba(255, 255, 255, 0.15);
+}
+
+.seasons-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+
+
+.season {
+   
+        padding: 10px;
+        
+}
+
+.season h2 {
+    margin-bottom: 10px;
+    color: rgba(0, 0, 0, 0.836);
+        text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2),
+            0px -5px 10px rgba(255, 255, 255, 0.15);
+    cursor: pointer;
+}
+
+.season ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.season ul li {
+    padding: 5px 0;
+    border-bottom: 1px solid #3f3e3e;
+}
+
+.season ul li strong {
+    margin-right: 10px;
+}

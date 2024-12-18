@@ -58,7 +58,9 @@ const ShowPage = () => {
 
       const cast = [];
 
-        if (showCast.length) { for (let i = 0; i < 5 ; i++ ) {
+        if (showCast && showCast.length) { 
+          const maxCast = Math.min(showCast.length, 5);
+          for (let i = 0; i < maxCast ; i++ ) {
 
         cast.push(showCast[i].person.name);
       }  

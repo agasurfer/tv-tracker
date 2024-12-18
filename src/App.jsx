@@ -4,7 +4,7 @@ import './App.css';
 import HomePage from './pages/HomePage';
 import MyShowsPage from './pages/MyShowsPage';
 import ShowPage from './pages/ShowPage';
-import EpisodesList from './pages/EpisodesList';
+import EpisodesListPage from './pages/EpisodesListPage';
 
 const App = () => {
   return (
@@ -13,7 +13,7 @@ const App = () => {
           <Route path="/" element={ <HomePage /> } />
           <Route path="/my-shows" element={ <MyShowsPage /> } />
           <Route path="/show-page/:id" element={ <ShowPage /> } />
-          <Route path="/episodes-list/:id" element={ <EpisodesList /> } />
+          <Route path="/episodes-list/:id" element={ <EpisodesListPage /> } />
         </Routes>
       </Router>
     

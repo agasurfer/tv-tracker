@@ -1,5 +1,5 @@
 import React from 'react'
-import './MyShowsPage.css'
+
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import MyShows from '../components/MyShows'

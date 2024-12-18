@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import './SearchSection.css';
 import ShowCard from './ShowCard';
 
@@ -19,7 +19,7 @@ const SearchSection = () => {
 
     e.preventDefault();
 
-    const apiUrlSearch = ` https://api.tvmaze.com/search/shows?q=${userQuery}`
+    const apiUrlSearch = `https://api.tvmaze.com/search/shows?q=${userQuery}`
 
     try {
 

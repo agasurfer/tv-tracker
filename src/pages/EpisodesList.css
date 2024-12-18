@@ -1,9 +1,0 @@
-.container .episodes-list {
-    background-color: #fbb034;
-    background-image: linear-gradient(135deg, #fbb034 0%, #ffdd00 74%);
-    border-radius: 8px;
-    margin-bottom: 50px;
-    box-shadow: rgba(238, 201, 39, 0.979) 0px 3px 8px;
-    min-height: 60vh;
-    border: 2px #ffdd00 solid;
-}
