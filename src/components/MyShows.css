@@ -7,3 +7,12 @@
     min-height: 60vh;
     border: 2px #ffdd00 solid;
 }
+
+.my-shows-wrapper {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
