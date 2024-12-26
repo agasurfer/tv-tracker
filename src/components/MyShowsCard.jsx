@@ -13,13 +13,13 @@ const MyShowsCard = ({ show }) => {
                 const response = await fetch('https://676023f46be7889dc35cdc57.mockapi.io/api/bookmark/shows');
                 const allBookmarks = await response.json();
                 
-                // Trouver les données pour cette série
+                
                 const seriesBookmark = allBookmarks.find(bookmark => bookmark.originalId === show.originalId);
 
                 if (seriesBookmark && seriesBookmark.bookmarkedEpisodes) {
                     setBookmarkedEpisodes(Object.values(seriesBookmark.bookmarkedEpisodes));
                 } else {
-                    setBookmarkedEpisodes([]); // Aucun épisode bookmarké
+                    setBookmarkedEpisodes([]); 
                 }
             } catch (error) {
                 console.error('Error fetching bookmarked episodes:', error);
@@ -38,14 +38,14 @@ const MyShowsCard = ({ show }) => {
         }
 
         try {
-            // Supprimer la série
+            // Delete show
             const response = await fetch(`https://676023f46be7889dc35cdc57.mockapi.io/api/bookmark/shows/${show.id}`, {
                 method: 'DELETE',
             });
 
-            // Si la série est supprimée avec succès, supprimer aussi tous les épisodes bookmarkés
+            // If success delete bookmarks
             if (response.ok) {
-                // Supprimer tous les bookmarks d'épisodes associés
+                // Delete all bookmarks
                 const episodesPromises = bookmarkedEpisodes.map(episode => 
                     fetch(`https://676023f46be7889dc35cdc57.mockapi.io/api/bookmark/shows/${episode.id}`, {
                         method: 'DELETE',
@@ -62,7 +62,7 @@ const MyShowsCard = ({ show }) => {
         }
     };
 
-    // Récupérer le premier épisode bookmarké (si disponible)
+    
     const nextEpisode = bookmarkedEpisodes.length > 0 ? bookmarkedEpisodes[0] : null;
 
     return (
