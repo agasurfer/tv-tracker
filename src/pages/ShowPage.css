@@ -6,6 +6,7 @@
     box-shadow: rgba(238, 201, 39, 0.979) 0px 3px 8px;
     min-height: 60vh;
     border: 2px #ffdd00 solid;
+    
 }
 
 .show-img img {
@@ -15,14 +16,17 @@
     border: 2px solid black;
     box-shadow: rgba(0, 0, 0, 0.979) 0px 3px 8px;
     
+    
 }
+
+
 
 .show-name {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 35px;
-    margin-bottom: 20px;
+    padding: 15px;
+    
 
 color: rgba(0, 0, 0, 0.863);
     text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2),
@@ -34,22 +38,27 @@ color: rgba(0, 0, 0, 0.863);
 
 .show-genres {
     padding: 10px;
+    font-weight: 500;
 }
 
 .show-seasons {
     padding: 10px;
     margin-bottom: 20px;
+    display: inline-block;
 }
+
 .show-wrapper {
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 5fr 0.5fr ;
     gap: 10px;
+    padding-bottom: 30px;
 }
 
 
 
 .show-img {
+    position: relative;
     grid-column: 1 / 2;
     grid-row: 1 / 3;
 }
@@ -67,4 +76,21 @@ color: rgba(0, 0, 0, 0.863);
     margin-top: 10px;
     font-size: 1.1rem;
     padding-left: 10px;
+}
+
+.show .heart-icon {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    font-size: 2rem;
+    transform: translateX(-75%);
+    cursor: pointer;
+    
+}
+
+
+
+.heart-icon.liked {
+    color: red;
+   
 }

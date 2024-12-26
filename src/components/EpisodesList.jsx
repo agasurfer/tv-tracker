@@ -67,6 +67,7 @@ const EpisodesList = () => {
                 setShowBookmarkId(existingBookmark.id);
             } else {
                 console.error('Show must be bookmarked first');
+                alert("Show must be liked to set bookmark")
                 return;
             }
         }

@@ -35,38 +35,64 @@ const ShowCard = ({ shows }) => {
     checkIfBookmarked();
   }, [shows.show.id]);
 
-  const handleLikeToggle = async () => {
-    if (!liked) {
-    
-      const bookmarkData = {
-    originalId: shows.show.id,
-    name: shows.show.name,
-    bookmark: "",
-    image: shows.show.image ? shows.show.image.medium || shows.show.image.original : null,
-    genres: shows.show.genres,
-    status: shows.show.status,
-    seasonCount: seasonCount,
-    bookmarkedEpisodes: {} // Add this empty object for future episode bookmarks
-};
-      try {
-        const response = await fetch('https://676023f46be7889dc35cdc57.mockapi.io/api/bookmark/shows', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(bookmarkData),
-        });
-        if (!response.ok) {
-          throw new Error('Failed to save bookmark');
-        }
-        console.log('Bookmark saved successfully');
-        setLiked(true);
-      } catch (error) {
-        console.error('Error saving bookmark:', error);
-      }
-   
-  };
+ 
 
+  const handleLikeToggle = async () => {
+  if (!liked) {
+    // Add bookmark
+    const bookmarkData = {
+      originalId: shows.show.id,
+      name: shows.show.name,
+      bookmark: "",
+      image: shows.show.image ? shows.show.image.medium || shows.show.image.original : null,
+      genres: shows.show.genres,
+      status: shows.show.status,
+      seasonCount: seasonCount,
+      bookmarkedEpisodes: {}, // Add this empty object for future episode bookmarks
+    };
+    try {
+      const response = await fetch('https://676023f46be7889dc35cdc57.mockapi.io/api/bookmark/shows', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(bookmarkData),
+      });
+      if (!response.ok) {
+        throw new Error('Failed to save bookmark');
+      }
+      console.log('Bookmark saved successfully');
+      setLiked(true);
+    } catch (error) {
+      console.error('Error saving bookmark:', error);
+    }
+  } else {
+    // Confirm unlike action
+    const confirmUnlike = window.confirm('Are you sure you want to remove this show from your favorites?');
+    if (!confirmUnlike) return;
+
+    // Remove bookmark
+    try {
+      const bookmarksResponse = await fetch('https://676023f46be7889dc35cdc57.mockapi.io/api/bookmark/shows');
+      const bookmarks = await bookmarksResponse.json();
+      const bookmarkToRemove = bookmarks.find((bookmark) => bookmark.originalId === shows.show.id);
+
+      if (bookmarkToRemove) {
+        const deleteResponse = await fetch(
+          `https://676023f46be7889dc35cdc57.mockapi.io/api/bookmark/shows/${bookmarkToRemove.id}`,
+          {
+            method: 'DELETE',
+          }
+        );
+        if (!deleteResponse.ok) {
+          throw new Error('Failed to remove bookmark');
+        }
+        setLiked(false); // Correctly update the `liked` state
+      }
+    } catch (error) {
+      console.error('Error removing bookmark:', error);
+    }
+  }
 };
 
   const imageUrl = shows.show.image
