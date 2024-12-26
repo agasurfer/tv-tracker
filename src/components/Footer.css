@@ -44,3 +44,15 @@
     flex-direction: column;
     gap: 5px;
 }
+
+@media (max-width: 700px) {
+
+.footer .logo {
+    display: none;
+}
+
+.return-top {
+    padding-right: 25px;
+}
+
+}
