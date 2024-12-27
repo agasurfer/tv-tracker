@@ -79,7 +79,7 @@ const EpisodesList = () => {
             let updatedBookmarkedEpisodes = {};
 
             if (!isCurrentlyBookmarked) {
-                // Si on clique sur un nouvel épisode, on efface tous les autres et on ne garde que celui-ci
+                // Saves only last bookmark
                 updatedBookmarkedEpisodes = {
                     [newEpisodeId]: {
                         episodeId: newEpisodeId, 
@@ -90,9 +90,7 @@ const EpisodesList = () => {
                      } 
                 };
             }
-            // Si on clique sur l'épisode déjà bookmarké, on le supprime simplement
-            // updatedBookmarkedEpisodes reste un objet vide dans ce cas
-
+           
             // Get current bookmark data
             const getCurrentBookmark = await fetch(`https://676023f46be7889dc35cdc57.mockapi.io/api/bookmark/shows/${showBookmarkId}`);
             const currentBookmark = await getCurrentBookmark.json();
@@ -146,7 +144,7 @@ const EpisodesList = () => {
                                             onClick={() => handleBookmarkToggle(episode)}
                                         >
                                             {bookmarkedEpisodes[episode.id] ? 
-                                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#75FB4C">
+                                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#19d600">
                                                     <path d="M713-600 600-713l56-57 57 57 141-142 57 57-198 198ZM200-120v-640q0-33 23.5-56.5T280-840h240v80H280v518l200-86 200 86v-278h80v400L480-240 200-120Zm80-640h240-240Z"/>
                                                 </svg> : 
                                                 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368">
