@@ -27,6 +27,8 @@
     position: relative;
     object-fit: cover;
     width: 180px;
+    display: inline-block;
+    width: fit-content;
     
 }
 
