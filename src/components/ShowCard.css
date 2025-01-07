@@ -14,7 +14,7 @@
         margin-bottom: 50px;
         box-shadow: rgba(29, 24, 2, 0.349) 0px 3px 8px;
         cursor: pointer;
-        /* position: relative; */
+        position: relative;
         
         
 }
@@ -27,8 +27,7 @@
     position: relative;
     object-fit: cover;
     width: 180px;
-    display: inline-block;
-    width: fit-content;
+ 
     
 }
 
