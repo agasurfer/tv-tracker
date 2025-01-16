@@ -14,6 +14,9 @@ img {
 body {
   color: rgb(3, 3, 3);
   font-family: "Roboto", serif;
-background-color: #2d3436;
-  background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
+  background: #131414;
+    background: linear-gradient(to right,
+        #232526, #262829);
+/* background-color: #2d3436;
+  background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%); */
 }
