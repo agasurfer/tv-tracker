@@ -3,8 +3,8 @@
     background-image: linear-gradient(135deg, #fbb034 0%, #ffdd00 74%);
     border-radius: 8px;
     margin-bottom: 50px;
-    box-shadow: rgba(238, 201, 39, 0.979) 0px 3px 8px;
-    border: 2px #ffdd00 solid;
+    box-shadow: rgba(184, 156, 30, 0.979) 0px 2px 4px;
+    border: 1px #968200 solid;
 }
 
 .footer .logo h1 {
